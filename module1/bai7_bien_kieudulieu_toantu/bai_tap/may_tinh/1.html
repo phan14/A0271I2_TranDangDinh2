@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <h2>Caculator</h2>
+    <input id="gta" type="text" name="a">
+    <input id="gtb" type="text" name="b">
+    <br>
+    <br>
+
+  <form>
+    <input onclick="cong()" type="button" name="addition" value="Addition(+)">
+    <input onclick="tru()" type="button" name="subtraction" value="Subtraction(-)">
+    <input onclick="nhan()" type="button" name="multiplication" value="Multiplication(*)">
+    <input onclick="chia()" type="button" name="division" value="Division(/)">
+    <br>
+    <br>
+    <p id="result">Result</p>
+</form>
+<script>
+    let A = document.getElementById("gta");
+    let B = document.getElementById("gtb");
+    let sum;
+    let sum2;
+    let sum3;
+    let sum4;
+
+    function cong() {
+        sum = parseFloat(A.value) + parseFloat(B.value) ;
+        document.getElementById("result").innerHTML = "Result Addition : " + sum;
+    }
+    function tru() {
+        sum2 = parseFloat(A.value) - parseFloat(B.value) ;
+        document.getElementById("result").innerHTML = "Result Subtraction : " + sum2;
+    }
+    function nhan() {
+        sum3 = parseFloat(A.value) * parseFloat(B.value) ;
+        document.getElementById("result").innerHTML = "Result Multiplication : " + sum3;
+    }
+    function chia() {
+        sum4 = parseFloat(A.value) / parseFloat(B.value) ;
+        document.getElementById("result").innerHTML = "Result Division : " + sum4;
+    }
+</script>
+</body>
+</html>

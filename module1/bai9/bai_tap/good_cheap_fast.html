@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            width: 200px;
+        }
+
+        .toggle-container .toggle {
+            visibility: hidden;
+        }
+
+        .label {
+            position: relative;
+            background-color: #d0d0d0;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 0 15px 0;
+            width: 80px;
+            height: 40px;
+        }
+
+        .toggle:checked + .label {
+            background-color: #447cad;
+        }
+
+        .ball {
+            background: #fff;
+            height: 34px;
+            width: 34px;
+            border-radius: 50%;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            align-items: center;
+            justify-content: center;
+            animation: slideOff 0.3s linear forwards;
+        }
+
+        .toggle:checked + .label .ball {
+            animation: slideOn 0.3s linear forwards;
+        }
+
+        @keyframes slideOn {
+            0% {
+                transform: translateX(0) scale(1);
+            }
+            50% {
+                transform: translateX(20px) scale(1.2);
+            }
+            100% {
+                transform: translateX(40px) scale(1);
+            }
+        }
+
+        @keyframes slideOff {
+            0% {
+                transform: translateX(40px) scale(1);
+            }
+            50% {
+                transform: translateX(20px) scale(1.2);
+            }
+            100% {
+                transform: translateX(0) scale(1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="toggle-container">
+        <input type="checkbox" id="good" class="toggle" onclick="kt(1)"/>
+        <label for="good" class="label">
+            <div class="ball"></div>
+        </label>
+        <span>Good</span>
+    </div>
+
+    <div class="toggle-container">
+        <input type="checkbox" id="cheap" class="toggle"onclick="kt(2)" />
+        <label for="cheap" class="label">
+            <div class="ball"></div>
+        </label>
+        <span>Cheap</span>
+
+    </div>
+    <div class="toggle-container">
+        <input type="checkbox" id="fast" class="toggle" onclick="kt(3)"/>
+        <label for="fast" class="label">
+            <div class="ball"></div>
+        </label>
+        <span>Fast</span>
+
+    </div>
+
+<script>
+    let good = document.getElementById('good');
+    let fast = document.getElementById('fast');
+    let cheap = document.getElementById('cheap');
+
+    function kt(option) {
+        switch (option) {
+            case 1:
+                if (fast.checked && cheap.checked) {
+                    cheap.checked = false;
+                }
+                break;
+            case 2:
+                if (good.checked && cheap.checked) {
+                    good.checked = false;
+                }
+                break;
+            case 3:
+                if (good.checked && fast.checked) {
+                    fast.checked = false;
+                }
+                break;
+        }
+    }
+
+</script>
+</body>
+</html>

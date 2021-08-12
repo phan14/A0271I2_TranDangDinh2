@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <input id="currency" type="text" name="currency">
+            </td>
+            <td>
+                <select>
+                    <option value="VND">VietNam</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <input onclick="in_ra()" type="button" name="money"
+                       style="background-color: blue; color: white" value="money">
+            </td>
+        </tr>
+        <tr>
+            <td id="result" style="color: blue">Result</td>
+        </tr>
+    </table>
+</form>
+
+<script>
+    function in_ra() {
+        let input = document.getElementById("currency");
+        let money = parseInt(input.value) / 23000;
+        document.getElementById("result").innerHTML = "Result :" + money;
+    }
+</script>
+</body>
+</html>

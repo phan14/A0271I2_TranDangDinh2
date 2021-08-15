@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a,b ,c;
+    a = prompt("gia tri a: ");
+    b = prompt("gia tri b: ");
+    c = prompt("gia tri c: ");
+
+    var max=a;
+    switch (max>b) {
+        case true:
+            switch (max>c) {
+                case false:
+                    break;
+            }
+            break;
+            case false:
+                max=b;
+                break;
+    }
+    alert(max);
+
+</script>
+</body>
+</html>

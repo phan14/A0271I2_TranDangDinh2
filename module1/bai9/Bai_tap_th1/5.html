@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    <!--    nhập giá trị -->
+    let vatly =prompt("nhap diem vatly");
+    let hoa = prompt("nhap diem hoa");
+    let sinh = prompt("nhap diem sinh");
+
+    // chuyển sang số nguyên
+    a = parseInt(vatly);
+    b = parseInt(sinh);
+    c = parseInt(hoa);
+
+
+    // tính toán
+    let dtb=(a+b+c)/3;
+
+    if (dtb>=9.0){
+        alert('Hang A');
+    }else if((dtb>=7.0) && (dtb<90)){
+        alert('Hang B');
+    }else if(dtb>=5.0){
+        alert('Hang C');
+    }else{
+        alert('Hang F');
+    }
+
+
+</script>
+</body>
+</html>

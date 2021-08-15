@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a=prompt("Nhap canh a=");
+    var b=prompt("Nhap canh b=");
+    var c=prompt("Nhap canh c=");
+
+    a=parseInt(a);
+    b=parseInt(b);
+    c=parseInt(c);
+
+
+    if ((a<b+c) && (b<a+c) && (c<a+b)) {
+        if (a * a == b * b + c * c || b * b == a * a + c * c || c * c == a * a + b * b) {
+            alert("Day la tam giac vuong");
+        } else if (a == b && b == c) {
+            alert("Day la tam giac deu");
+        } else if (a == b || a == c || b == c) {
+            alert("Day la tam giac can");
+        } else if (a * a > b * b + c * c || b * b > a * a + c * c || c * c > a * a + b * b) {
+            alert("Day la tam giac tu");
+        } else {
+            alert("Day la tam giac nhon");
+        }
+
+    }else{
+            alert("Ba canh a, b, c khong phai la ba canh cua mot tam giac");
+    }
+</script>
+</body>
+</html>

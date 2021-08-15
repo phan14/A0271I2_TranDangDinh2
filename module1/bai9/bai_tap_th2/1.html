@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập nhiệt độ C:</p>
+<input  type="text" id="C">
+<input type="button" value="chuyen doi" onclick="chuyendoi()">
+<p id="result1">Kết quả:</p>
+<script>
+    function chuyendoi() {
+        let C = parseFloat(document.getElementById("C").value);
+        if (C == true) {
+            alert("Moi nhap lai");
+        }
+        else {
+            let F = C * 9 / 5 + 32;
+            document.getElementById("result1").innerHTML = "<b>kết quả:"+" " + F+"độ F";
+        }
+    }
+</script>
+</body>
+</html>

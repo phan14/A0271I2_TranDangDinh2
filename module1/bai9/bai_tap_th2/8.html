@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Kiểm tra xem một số nhập vào có phải là tuổi của một người không.</p>
+<p>Nhập vào số tuổi:</p>
+<input id="nhap" type="text" \>
+<input type="button" value="Kiểm tra" onclick="Tuoi()">
+<p id="result">Thông Báo:</p>
+<script>
+    function Tuoi() {
+        let tuoi = parseFloat(document.getElementById("nhap").value);
+        if (tuoi <=0) {
+            document.getElementById("result").innerHTML = "<b>Thông báo:  " +" Số tuổi không đúng,Mời ktra lại ";
+        }
+        else {
+            if (tuoi > 0 && tuoi <= 120) {
+                document.getElementById("result").innerHTML = "<b>Thông báo:  " +" Đây là số tuổi của 1 người ";
+            }
+            else {
+                document.getElementById("result").innerHTML = "<b>Thông báo:  " +" Đây không phải là số tuổi của 1 người ";
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

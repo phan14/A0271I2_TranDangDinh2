@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Tính giá điện.</p>
+<p>Nhập vào số điện tiêu thụ (kwh): </p>
+<input id="dien" type="text">
+<input type="button" value="Tổng tiền" onclick="thanhtoan()">
+<p id="result">Kết quả:</p>
+<script>
+    function thanhtoan() {
+    let tien = parseFloat(document.getElementById("dien").value);
+    let s= 0;
+
+        if (tien <= 100) {
+            s =tien*600;
+        }
+        else if((tien>101)&&(tien<=150)){
+            s =tien*700;
+        }
+        else if((tien>=151)&&(tien<=200))
+        {
+            s = tien*900;
+        }
+        else
+        {
+            s = tien*1100;
+        }
+        document.getElementById("result").innerHTML = "Số tiền điện phải thanh toán là: " + s + " VND";
+
+}
+</script>
+</body>
+</html>

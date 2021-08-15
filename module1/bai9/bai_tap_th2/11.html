@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Tính thuế thu nhập.</p>
+<p>Nhập số tiền lương: </p>
+<input id="sotien" type="text">
+<input type="button" value="Tổng tiền" onclick="thanhtoan()">
+<p id="result">Kết quả:</p>
+<script>
+    function thanhtoan() {
+        let luong = parseFloat(document.getElementById("sotien").value);
+        let luongrong= 0;
+        var sothue,thuesuat;
+
+        if(luong>15)
+        {
+            sothue=luong*30/100;
+            thuesuat=30;
+        }
+        else if(luong>=7)
+        {
+            sothue=luong*20/100;
+            thuesuat=20;
+        }
+        else
+        {
+            sothue=luong*10/100;
+            thuesuat=10;
+        }
+        luongrong=luong-sothue;
+       alert("Số tiền lương là: " + luong + " VND");
+       alert("Thuế thu nhập "+ thuesuat + "%" +" với mức thuế suất: " +sothue );
+        document.getElementById("result").innerHTML = "Số tiền nhận được  là: " + luongrong + " VND";
+
+    }
+</script>
+</body>
+</html>

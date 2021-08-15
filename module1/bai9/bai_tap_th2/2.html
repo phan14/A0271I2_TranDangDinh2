@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>Nhập độ dài (m):</p>
+<input  type="text" id="M">
+<input type="button" value="Doi" onclick="chuyendoi()">
+<p id="result1">Kết quả:</p>
+<script>
+    function chuyendoi() {
+        let M = parseFloat(document.getElementById("M").value);
+        if (M == 0) {
+            alert("Moi nhap lai")
+        }
+        else {
+            let Feet = M *  3.2808;
+            document.getElementById("result1").innerHTML = "<b>kết quả:"+" " +Feet+" feel";
+        }
+    }
+</script>
+</body>
+</html>

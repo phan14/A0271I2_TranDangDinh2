@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function hienthi() {
+        let count = 0, sum =0
+        let ds =""
+        for (let i=1; ; i++){
+            if(i%7==0){
+                ds += i+" "
+                sum += i
+                count++
+                if(count==30)
+                    break;
+            }
+        }
+        document.write("Danh sách:<br>"+ds)
+        document.write("<br>")
+        document.write("Tổng bằng: <br>"+sum)
+    }
+    hienthi();
+</script>
+</body>
+</html>

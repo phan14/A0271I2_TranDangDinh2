@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function showMessage() {
+        let n=prompt("nhap gia tri n")
+        let F , F0= 0, F1=0
+        let fi = "";
+        for (let i=0; i<n;i++){
+            if(i==0){
+                F=1
+                F1=1
+                fi += F+ " "
+            }else{
+                F= F0+F1
+                F0 = F1
+                F1 = F
+                fi += F+ " "
+                console.log(i +" = "+F)
+            }
+        }
+        document.write("Hiển thị Fibonacci :<br>"+fi)
+    }
+    showMessage();
+</script>
+</body>
+</html>

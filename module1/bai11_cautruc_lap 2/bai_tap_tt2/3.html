@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<p></p>
+<body>
+<br><input type="button" value="Bài 3.1" onclick="bai_3a()"> in tam giác
+<br><input type="button" value="Bài 3.2" onclick="bai_3b()"> in tam giác
+<br><input type="button" value="Bài 3.2" onclick="bai_3c()"> in tam giác
+<br><input type="button" value="Bài 3.2" onclick="bai_3d()"> in tam giác
+
+
+
+<script>
+    function bai_3a() {
+        let n = prompt("Nhap n")
+        let i, j;
+
+        for (i = 1; i <= n; i++) {
+            for (j = 1; j <= i; j++) {
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+    }
+    function bai_3b() {
+        let n = prompt("Nhap n")
+        let i, j;
+        for(i=n;i>0;i--)
+        {
+            for(j=0;j<n-i;j++)
+                document.write(" ");
+            for(j=1;j<=2*i-1;j++)
+                document.write("*");
+            document.write("<br>");
+        }
+    }
+
+</script>
+</body>
+</html>

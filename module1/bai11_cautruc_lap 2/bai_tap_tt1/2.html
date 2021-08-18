@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function nhietdo() {
+        let nhietdo = (prompt("Nhập vào nhiệt độ"))
+        while (nhietdo<20 || nhietdo>100){
+            if(nhietdo<20){
+                alert("Nhiệt độ quá lạnh ")
+                alert(">Tăng nhiệt độ từ 20 độ lên !!")
+                nhietdo = (prompt("Nhập vào nhiệt độ"))
+            }else if(nhietdo>100){
+                alert("Nhiệt độ quá nóng  ")
+                alert("> Giảm nhiệt độ xuống dưới 100 độ  !!")
+                nhietdo = (prompt("Nhập vào nhiệt độ"))
+            }
+        }
+        alert("Nhiệt độ bình thường")
+    }
+    nhietdo();
+</script>
+</body>
+</html>

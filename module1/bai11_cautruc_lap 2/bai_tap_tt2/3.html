@@ -6,18 +6,18 @@
 </head>
 <p></p>
 <body>
-<br><input type="button" value="Bài 3.1" onclick="bai_3a()"> in tam giác
-<br><input type="button" value="Bài 3.2" onclick="bai_3b()"> in tam giác
-<br><input type="button" value="Bài 3.2" onclick="bai_3c()"> in tam giác
-<br><input type="button" value="Bài 3.2" onclick="bai_3d()"> in tam giác
+<br><input type="button" value="Bài 3.1" onclick="bai_3a()"> in tam giác  vuông góc bên trấi
+<br><input type="button" value="Bài 3.2" onclick="bai_3b()"> in tam giác  vuông góc trên bên trái
+<br><input type="button" value="Bài 3.3" onclick="bai_3c()"> in tam giác  vuông  góc bên phải
+<br><input type="button" value="Bài 3.4" onclick="bai_3d()"> in tam giác  vuông  góc trên bên phải
 
 
 
 <script>
+    let i, j;
+
     function bai_3a() {
         let n = prompt("Nhap n")
-        let i, j;
-
         for (i = 1; i <= n; i++) {
             for (j = 1; j <= i; j++) {
                 document.write("*")
@@ -27,13 +27,36 @@
     }
     function bai_3b() {
         let n = prompt("Nhap n")
-        let i, j;
         for(i=n;i>0;i--)
         {
             for(j=0;j<n-i;j++)
                 document.write(" ");
             for(j=1;j<=2*i-1;j++)
                 document.write("*");
+            document.write("<br>");
+        }
+    }
+    function bai_3c () {
+        let n = prompt("Nhap n")
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= (n - i); j++) {
+                document.write("&nbsp&nbsp");
+            }
+            for (let k = 1; k <= i; k++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    }
+    function bai_3d() {
+        let n = prompt("Nhap n")
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j < i; j++) {
+                document.write("&nbsp&nbsp");
+            }
+            for (let k = i; k <= n; k++) {
+                document.write("*");
+            }
             document.write("<br>");
         }
     }

@@ -7,17 +7,17 @@
 <body>
 <script>
     function game() {
-        let phamvi = (prompt("Trò chơi đoán số từ 0 - n"))
-        let nhapso = (prompt("Nhập vào số muốn đoán"))
+        let pv = (prompt("Trò chơi đoán số từ 0 - n"))
+        let ns = (prompt("Nhập vào số muốn đoán"))
         let count;
-        if(phamvi){
-            count = Math.floor(Math.random()*phamvi)
-            if(count == nhapso){
+        if(pv){
+            count = Math.floor(Math.random()*pv)
+            if(count == ns){
                 alert("Bạn đã đoán đung")
             }else{
-                while (count != nhapso){
+                while (count != ns){
                     alert("Bạn đoán sai số đúng là "+count)
-                    nhapso = (prompt("Nhập vào số muốn đoán"))
+                    ns = (prompt("Nhập vào số muốn đoán"))
                 }
                 alert(" Chuc mung ban đoán đúng")
             }

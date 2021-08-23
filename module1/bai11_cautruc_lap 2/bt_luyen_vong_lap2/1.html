@@ -5,27 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+
+<h1 id="result" style="text-align: center"> </h1>
 <script>
-    function showMessage() {
-        let n=prompt("nhap gia tri n")
-        let F , F0= 0, F1=0
-        let fi = "";
-        for (let i=0; i<n;i++){
-            if(i==0){
-                F=1
-                F1=1
-                fi += F+ " "
-            }else{
-                F= F0+F1
-                F0 = F1
-                F1 = F
-                fi += F+ " "
-                console.log(i +" = "+F)
-            }
+    function fb(n) {
+        if (n < 2) {
+            return 1;
+        } else {
+            return fb(n-2) + fb(n-1);
         }
-        document.write("Hiển thị Fibonacci :<br>"+fi)
     }
-    showMessage();
+    function display() {
+        let n = prompt("Nhập số lượng số Finbonancci đầu tiên cần hiển thị :")
+        let res = document.getElementById("result");
+        let arrayOfFibo = ``;
+        for ( var i = 1; i<=n; i++) {
+            arrayOfFibo += `${fb(i)}  ,  `;
+        }
+        res.innerHTML = arrayOfFibo;
+    }
+    display();
 </script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let numbers = [ 100,191,772,204,1,542,101,867,887,702];
+
+
+    document.write("10 numbers: " + numbers);
+    document.write("<br>");
+    let maxNum = numbers[0];
+    let totalSum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        let num = numbers[i];
+        totalSum += num;
+        if (num > maxNum) {
+            maxNum = num;
+        }
+    }
+    let tb = totalSum / numbers.length;
+    document.write("Max=" + maxNum + "<br>");
+    document.write("Average=" + tb + "<br>");
+
+</script>
+</body>
+</html>

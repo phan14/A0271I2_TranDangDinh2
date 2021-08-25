@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>TuDien</h2>
+    <h3> EN = ['time','year','people']<br>
+        VI = ['thời gian','năm','con người']</h3>
+    <input type="text"  id="input">
+    <input type="button" value="Translate" onclick="look()">
+    <h1 id="result"><br></h1>
+    <hr>
+    <script>
+        let res = document.getElementById("result");
+
+        function look() {
+            let input = document.getElementById("input").value;
+            let EN = ['time','year','people'];
+            let VI = ['thời gian','năm','con người'];
+            for (let i = 0; i < EN.length; i++) {
+                if (input === EN[i]) {
+                    res.innerHTML = 'kết quả:'+`${input}--->${VI[i]}`
+                    break;
+                } else {
+                    res.innerHTML = `thông báo không tìm thấy `;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

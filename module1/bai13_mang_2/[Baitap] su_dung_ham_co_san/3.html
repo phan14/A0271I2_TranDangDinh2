@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+        <script>
+      let testString = 'The Quick Brown Fox';
+
+            function editString(aString) {
+                let result = "";
+                for (let i = 0; i < aString.length; i++) {
+                    let thisChar = aString.substring(i,i+1);
+                    let isUpperCase = (thisChar === thisChar.toUpperCase());
+                    if (isUpperCase) {
+                        result += thisChar.toLowerCase();
+                    } else {
+                        result += thisChar.toUpperCase();
+                    }
+                }
+                return result;
+            }
+            alert(editString(testString))
+        </script>
+</body>
+</html>

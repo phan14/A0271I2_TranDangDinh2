@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    let numbers = [89,25,49,1,6,7,8,10,6,1];
+
+
+    document.write("10 numbers: " + numbers);
+    document.write("<br>");
+    document.write("Numbers greater or equal to 10: ");
+
+    for (let i = 0; i < numbers.length; i++) {
+        let num = numbers[i];
+        if (num >= 10) {
+            document.write(num + ",");
+        }
+    }
+
+</script>
+</body>
+</html>

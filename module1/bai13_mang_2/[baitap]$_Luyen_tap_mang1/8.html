@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let numbers = [ 100,191,772,204,1,542,101,867,887,702];
+
+
+    document.write("10 numbers: " + numbers);
+    document.write("<br>");
+    numbers.sort(function(a, b){
+        return a-b
+    }
+    );
+    document.write("Sorted: " + numbers + "<br>")
+</script>
+</body>
+</html>

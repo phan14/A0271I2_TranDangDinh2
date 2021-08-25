@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    for (let i = 0; i < 10; i++) {
+        numbers[i]=parseInt(prompt("Enter number no " + (i+1)));
+    }
+    document.write("Array: " + numbers + "<br>");
+    let v = parseInt(prompt("Enter V"));
+    let posV = numbers.indexOf(v);
+    if (posV !== -1) {
+        alert("V is in the array");
+    } else {
+        alert("V is not in the array");
+    }
+
+</script>
+</body>
+</html>

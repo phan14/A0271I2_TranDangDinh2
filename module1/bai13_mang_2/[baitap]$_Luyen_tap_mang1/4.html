@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    for (let i = 0; i < 5; i++) {
+        numbers[i]=parseInt(prompt("Enter number no " + (i+1)));
+    }
+    document.write("Array: " + numbers + "<br>");
+
+    let reverse = [];
+    for (let i = 0; i < numbers.length; i++) {
+        let index = numbers.length - 1 - i;
+        reverse[i] = numbers[index];
+    }
+    document.write("Reverse: " + reverse + "<br>");
+</script>
+</body>
+</html>

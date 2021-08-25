@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    for (let i = 0; i < 10; i++) {
+        a[i]=parseInt(prompt("Enter number no " + (i+1)));
+    }
+    document.write("Array A: " + a + "<br>");
+
+    alert("nhap mang 2")
+    let b = [];
+    for (let i = 0; i < 10; i++) {
+        b[i]=parseInt(prompt("Enter number no " + (i+1)));
+    }
+    document.write("Array B: " + b + "<br>");
+
+    let c = [20];
+    c = a.concat(b);
+    document.write("Sau khi nối: " + c + "<br>");
+
+</script>
+</body>
+</html>

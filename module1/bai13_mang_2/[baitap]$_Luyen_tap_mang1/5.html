@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let numbers = [-4,9,-8,-4,-7,4,-1,4,-6,-9];
+
+
+    document.write("10 numbers: " + numbers);
+    document.write("<br>");
+    let countNeg = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        let num = numbers[i];
+        if (num < 0) {
+            countNeg++;
+        }
+    }
+    document.write("Negative count: " + countNeg + "<br>");
+
+</script>
+</body>
+</html>

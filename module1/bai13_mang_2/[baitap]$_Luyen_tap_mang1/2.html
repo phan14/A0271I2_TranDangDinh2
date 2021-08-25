@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let numbers = [534,548,583,401,440,412,800,815,326,4];
+
+
+    document.write("Array of 10 integers: " + numbers + "<br>")
+    let maxNum = numbers[0];
+    for (let i = 0; i < numbers.length; i++) {
+        let num = numbers[i];
+        if (num > maxNum) {
+            maxNum = num;
+        }
+    }
+    document.write("Max=" + maxNum);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arrayLength = parseInt(prompt("Mang dai bao nhieu"));
+    let arr = [];
+    let countNum = 0;
+    for (let i = 0; i < arrayLength; i++) {
+        arr.push(prompt("Nhap ky tu"));
+        let isNumber = isNaN(arr[i]) === false;
+        if (isNumber) {
+            countNum++;
+        }
+    }
+
+    document.write("Array: " + arr + "<br>");
+    document.write("Length: " + arr.length + "<br>");
+    document.write("Numbers: " + countNum);
+</script> 

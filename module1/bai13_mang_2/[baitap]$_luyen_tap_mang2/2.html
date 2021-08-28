@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let testArray = [ 'c', 's', 'c', '2', '6', '1' ];
+    let result = "";
+    for (let i = 0; i < testArray.length; i++) {
+        let reverseIndex = testArray.length - 1 - i;
+        let reverseElement = testArray[reverseIndex];
+        result += reverseElement;
+    }
+    document.write(result);
+</script> 

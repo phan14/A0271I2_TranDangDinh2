@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+            if (number<2){
+                return false;
+            }else {
+                let countNumber =0;
+                for (let i  =1 ;i<=number;i++){
+                    let isDivisible = ((number % i) === 0);
+                    if (isDivisible) {
+                        countNumber++;
+                    }
+                }
+                return (countNumber === 2);
+            }
+    }
+    alert(isPrime(1));
+    alert(isPrime(2));
+    alert(isPrime(3));
+    alert(isPrime(13));
+    alert(isPrime(68));
+    alert(isPrime(99));
+
+</script>
+</body>
+</html>

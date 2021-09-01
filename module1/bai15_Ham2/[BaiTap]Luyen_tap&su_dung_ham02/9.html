@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>  <input id="inputChar">
+<button onclick="taoMang()">Check</button>
+<p id="display"></p>
+<script>
+
+    function taoMang() {
+        let arr = [];
+        let count = 0;
+        let str = document.getElementById('inputChar').value;
+        arr = str.split("");
+        document.getElementById('display').innerHTML = arr;
+        if (arr.length != 0) {
+            let inputTest = prompt("Nhap tu ban muon tim? ");
+            for (let i = 0; i < arr.length; i++) {
+                if (inputTest === arr[i]) {
+                    count++;
+                } else {
+                    count;
+                }
+            }
+        } else {
+            alert('Ban phai nhap chuoi da');
+        }
+        if (count === 0) {
+            document.getElementById('display').innerHTML = "-1";
+        } else {
+            document.getElementById('display').innerHTML = count;
+        }
+    }
+</script>
+</body>
+</html>

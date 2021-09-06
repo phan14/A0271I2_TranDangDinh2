@@ -2,89 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Quan Ly San Pham</title>
+    <title>Product Management</title>
+    <style>
+        th,td {
+            border: 1px solid black;
+        }
+
+        label {
+            display: block;
+            width: 200px;
+        }
+
+        button {
+            width: 50px;
+        }
+    </style>
 </head>
 <body>
-<h3>Add Product</h3>
-<input id="nameProduct" type="text" placeholder="Ten san pham">
-<button onclick="themMoi()">Them</button>
-<h3>
-    Display All Product
-</h3>
-<div id="tableProduct">
-    ​
+<div class="container">
+    <form id="form-add">
+        <!--        <button type="button" id="btn-display">Hiển thị danh sách sản phẩm</button><br>-->
+
+        <label for="input-add">Thêm sản phẩm</label>
+        <input type="text" id="input-add">
+        <button type="button" id="btn-add">Thêm</button><br>
+
+        <label for="input-edit">Sửa tên sản phẩm</label>
+        <input type="text" id="input-edit">
+        <button type="button" id="btn-edit">Sửa</button><br>
+
+    </form><br>
+    <div id="div-list">
+    </div>
 </div>
-​
-​
-<script>
-    let danhSachSanPham = ["Apple", "Samsung", "Xiaomi"];
-    hienThiListSanPham();
-​
-    function hienThiListSanPham() {
-        let result = "";
-        result += "<table id='tableProduct'><th>Ten san pham<td></td><td colspan='2'>" + danhSachSanPham.length + " products</td></th>"
-        for (let index = 0; index < danhSachSanPham.length; index++) {
-            result += "<tr><td>" + danhSachSanPham[index] + "</td>" +
-                "<td><button onclick='edit(" + index + ")'>Edit</button></td>" +
-                "<td><button onclick='deleteProduct(" + index + ")'>Delete</button></td>" +
-                "</tr>";
-        }
-        result += "</table>";
-        document.getElementById("tableProduct").innerHTML = result;
-    }
-​
-    function themMoi() {
-        let sanPham = document.getElementById("nameProduct");
-        if (sanPham.value === "") {
-            alert("Vui long dien ten san pham");
-        } else {
-            danhSachSanPham.push(sanPham.value);
-        }
-        // removeTable();
-        hienThiListSanPham();
-    }
-​
-    function edit(temp) {
-        let result  = "";
-        result += "<table id='tableProduct'><th>Ten san pham<td></td><td colspan='2'>" + danhSachSanPham.length + " products</td></th>";
-        for (let index = 0; index < danhSachSanPham.length; index++) {
-            if (temp === index) {
-                result += "<tr><td><input id='edit' type='text' value='" + danhSachSanPham[index] + "'>"+ "</td>" +
-                    "<td><button onclick='update(" + index + ")'>Update</button></td>" +
-                    "<td><button onclick='deleteProduct(" + index + ")'>Delete</button></td>" +
-                    "</tr>";
-            }else {
-                result += "<tr><td>" + danhSachSanPham[index] + "</td>" +
-                    "<td><button onclick='edit(" + index + ")'>Edit</button></td>" +
-                    "<td><button onclick='deleteProduct(" + index + ")'>Delete</button></td>" +
-                    "</tr>";
-            }
-        }
-        result += "</table>";
-        document.getElementById("tableProduct").innerHTML = result;
-​
-    }
-​
-    function update(temp) {
-        let tenMoi = document.getElementById("edit").value;
-        for (let index = 0; index < danhSachSanPham.length; index++){
-            if(temp === index){
-                danhSachSanPham[index] = tenMoi;
-            }
-        }
-        hienThiListSanPham();
-    }
-​
-    function deleteProduct(temp){
-        if (confirm("Chac chan muon xoa san pham "+ danhSachSanPham[temp] + " ra khoi danh sach san pham?")){
-            danhSachSanPham.splice(temp,1);
-        }
-        hienThiListSanPham();
-    }
-    // function removeTable() {
-    //     let table = document.getElementById("tableProduct");
-    //     table.remove();
-    // }
-</script>
 </body>
 </html>
+<script>
+    // let buttonDisplay = document.getElementById("btn-display");
+    let inputAdd = document.getElementById("input-add");
+    let buttonAdd = document.getElementById("btn-add");
+    let divList = document.getElementById("div-list");
+    let inputEdit = document.getElementById("input-edit");
+    let buttonEdit = document.getElementById("btn-edit");
+
+    // buttonDisplay.addEventListener("click", displayList);
+    buttonAdd.addEventListener("click",addProduct);
+    buttonEdit.addEventListener("click", editProduct);
+
+    let productList = ["Pen","Paper","Ink","Eraser"];
+
+    function displayList() {
+        let tableHTML = "<table><tr><th>No</th><th>Product Name</th><th>Delete Product</th></tr>";
+        for (let i = 0; i < productList.length; i++) {
+            tableHTML += "<tr>";
+            tableHTML += ("<td>" + (i+1) + "</td>");
+            tableHTML += ("<td onclick='showToEditInput(" + i + ")'>" + productList[i] + "</td>");
+            tableHTML += ("<td><button type='button' id='btn-" + i + "' onclick='deleteProduct(" + i + ")'>Delete</button></td>");
+            tableHTML += "</tr>"
+        }
+        tableHTML += "</table>";
+        divList.innerHTML = tableHTML;
+    }
+    displayList();
+
+    function deleteProduct(productIndex) {
+        productList.splice(productIndex, 1);
+        displayList();
+    }
+
+    function addProduct() {
+        let addValue = inputAdd.value.trim();
+        if (addValue === "") {
+            alert("Item must have a name!");
+        } else {
+            productList.push(addValue);
+            alert("Item added successfully!");
+        }
+        displayList();
+        inputAdd.value = "";
+    }
+
+    function showToEditInput(productIndex) {
+        inputEdit.value = productList[productIndex];
+    }
+
+    function editProduct() {
+        let productToEdit = inputEdit.value;
+        if (productToEdit === "") {
+            alert("Please choose a product from list below");
+        } else {
+            let productToEditIndex = productList.indexOf(productToEdit);
+            if (productToEditIndex === -1) {
+                alert("The product you want to edit is not found!");
+            } else {
+                productList[productToEditIndex] = prompt("Edit " + productToEdit + " to?");
+                inputEdit.value = "";
+            }
+        }
+        displayList();
+    }
+
+</script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Temperature = function (c) {
+        this.c = c;
+
+        this.changeToF = function () {
+            return c * 9 / 5 + 32;
+        }
+        this.changeToK = function () {
+            return c + 273.15;
+        }
+    }
+
+    let temp = new Temperature(25);
+    alert(temp.changeToF() + " do F" + " And " + temp.changeToK() + " Do K");
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x=prompt("nhập x");
+    let y=prompt("nhập y");
+
+
+    for(let  i = 1; i <= x; i++)    {
+        for(let k = 1 ; k <= y; k++){
+            if(i == 1 || k == 1 || i == x || k == y){
+                document.write("*")
+            }
+            else{
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write("<br>")
+
+
+    }
+</script>
+</body>
+</html>

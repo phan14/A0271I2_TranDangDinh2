@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>KT SNT</title>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kiểm tra số nguyên tố</title>
 </head>
 <body>
-<input id="inputNum">
-<code id="display"></code>
-<button onclick="timSoNguyenTo()">Check</button>
-</body>
-<script src="main.js"></script>
-</html>
+<!-- Xây dựng phương thức: -->
+
+<!-- boolean isPrime(int number) -->
+
+<!-- để kiểm tra xem một số nguyên bất kỳ có phải là số nguyên tố hay không. Sử dụng phương thức này để tìm tất cả các số nguyên tố nhỏ hơn 10000. -->
 <script>
-    function timSoNguyenTo(num) {
-        let id = true;
-        num = +document.getElementById('inputNum').value;
-        if (num < 2) {
-            id = false;
-        } else {
-            for (let i = 2; i < num -1; i++) {
-                if (num % i == 0) {
-                    id = false;
-                    break;
-                }
-            }
+    function isPrime(number) {
+        if (number < 2) return false;
+        if (number === 2) return true;
+        if (number % 2 === 0) return false;
+        for (let i = 2; i * i < number; i++) {
+            if (number % i === 0) return false;
         }
-        if (id == true) {
-            document.getElementById('display').innerHTML = num + " la so nguyen to" + "<br>";
-        } else {
-            document.getElementById('display').innerHTML = num + " ko phai so nguyen to" + "<br>";
+        return true;
+    }
+
+    document.write("Danh sách số nguyên tố nhỏ hơn 10000 <br>");
+
+    for (let i = 0; i <= 10000; i++) {
+        if (isPrime(i)) {
+            document.write(i + "<br>");
         }
     }
 </script>
+</body>
+</html>

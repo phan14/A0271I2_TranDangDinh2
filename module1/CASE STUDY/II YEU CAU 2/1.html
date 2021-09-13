@@ -12,18 +12,18 @@
         let luong=prompt("nhập số tiền lương");
         if(luong>15)
         {
-            sothue=luong*30/100;
-            thuesuat=30;
-        }
-        else if(luong>=7)
-        {
             sothue=luong*20/100;
             thuesuat=20;
         }
-        else
+        else if(luong>=7)
         {
             sothue=luong*10/100;
             thuesuat=10;
+        }
+        else
+        {
+            sothue=luong*5/100;
+            thuesuat=5;
         }
         luongrong=luong-sothue;
         document.write( "Luong = " + luong );

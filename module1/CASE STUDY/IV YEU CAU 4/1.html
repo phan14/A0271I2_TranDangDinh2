@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str ="tRuong    TaN   HAI ";
+    function title(str) {
+        return str.toLowerCase().replace(/(^|\s)\S/g, function(l) {
+            return l.toUpperCase();
+        });
+    }
+
+    console.log(title(str));
+</script>
+</body>
+</html>

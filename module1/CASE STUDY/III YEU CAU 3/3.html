@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+        let num = [5,2,5,10];
+        let den = [6,3,4,2];
+
+        var max = num[0]/den[0];
+
+        for (let i = 1; i < num.length; i++) {
+            if (max < (num[i]/den[i])) {
+                max=num[i]/den[i];
+                index = i;
+            }
+        }
+        document.write(num[index] + "/" + den[index] + " là phân số lớn nhất"+"<br>"+" có chỉ số là " + index);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    let arr = [
+        [8,4,3,4],
+        [1,5,9,10],
+        [24,147,165],
+    ];
+    function isPrime(num) {
+        for (let i = 2; i * i <= num; i++)
+            if (num % i === 0)
+                return false;
+        return num > 1;
+    }
+
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (isPrime(arr[i][j])) {
+                console.log("Số nguyên tố: " + arr[i][j]);
+                count++;
+            }
+        }
+    }
+    console.log("Có " + count + " số nguyên tố có trong mảng.");
+</script>
+</body>
+</html>

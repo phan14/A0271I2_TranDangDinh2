@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number= parseInt(prompt("nhập độ dài của chuỗi"));
+    let array=[];
+    for (let i=0;i<number;i++){
+        array[i]= prompt("nhập  phần tử vào mảng vị tri"+i)
+    }
+    array.sort();
+    let chuoi=[];
+    for (let i=0;i<array.length;i++){
+        if (array[i]!==array[i+1]){
+            chuoi.push(array[i])
+        }
+    } document.write("Có " + chuoi.length + " ký tự khác nhau, đó là: " + chuoi.join(" "))
+
+</script>
+</body>
+</html>

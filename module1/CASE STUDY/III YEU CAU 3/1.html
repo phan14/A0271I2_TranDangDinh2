@@ -9,23 +9,36 @@
 <script>
 
 
-    function fillPrefixSum(arr, n, prefixSum)
-    {
-        prefixSum[0] = arr[0];
+//    function fillPrefixSum(arr, n, prefixSum)
+//    {
+//        prefixSum[0] = arr[0];
+//
+//        for (let i = 1; i < n; ++i)
+//            prefixSum[i] = prefixSum[i - 1] + arr[i];
+//    }
+//
+//    let arr = [1,2,3];
+//    let n = arr.length;
+//    let prefixSum = new Array(n);
+//
+//    fillPrefixSum(arr, n, prefixSum);
+//
+//    for (let i = 0; i < n; i++)
+//        document.write(prefixSum[i] + " ");
+//    document.write("");
 
-        for (let i = 1; i < n; ++i)
-            prefixSum[i] = prefixSum[i - 1] + arr[i];
+    let a=[];
+    let b=[];
+    let temp =0;
+    let n=parseInt(prompt("nhập vào độ dài mảng a"));
+    for(let i=0 ;i<n ;i++){
+        a.push(parseInt(prompt("nhap vào số nguyên ")));
     }
-
-    let arr = [1,2,3];
-    let n = arr.length;
-    let prefixSum = new Array(n);
-
-    fillPrefixSum(arr, n, prefixSum);
-
-    for (let i = 0; i < n; i++)
-        document.write(prefixSum[i] + " ");
-    document.write("");
+    for ( let i =0 ;i<a.length;i++){
+        temp +=a[i];
+        b[i]=temp;
+    }
+    alert("Mảng a là "+ a +"\n" + " Prefix sums của mảng a là :" +b);
 
 </script>
 </body>

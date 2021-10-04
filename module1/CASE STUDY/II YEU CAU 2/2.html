@@ -7,19 +7,32 @@
 <body>
 <script>
 
-    function kiemTra()
-    {
-        let x=prompt("nhập ký tự kiểm tra :")
-        if (x == 'a' || x == 'e' || x == 'i' ||
-            x == 'o' || x == 'u' || x == 'A' ||
-            x == 'E' || x == 'I' || x == 'O' || x == 'U')
-            document.write("nguyên âm" + "</br>");
-        else
-            document.write("Phụ âm " + "</br>");
+    // function kiemTra()
+    // {
+    //     let x=prompt("nhập ký tự kiểm tra :")
+    //     if (x == 'a' || x == 'e' || x == 'i' ||
+    //         x == 'o' || x == 'u' || x == 'A' ||
+    //         x == 'E' || x == 'I' || x == 'O' || x == 'U')
+    //         document.write("nguyên âm" + "</br>");
+    //     else
+    //         document.write("Phụ âm " + "</br>");
+    // }
+    //
+    // kiemTra();
+
+    let character =prompt("nhập ký tự cần kiểm tra");
+    character = character.toLowerCase();
+    switch (character) {
+    case 'o':
+    case 'u':
+    case 'i':
+    case 'a':
+    case 'e':
+     alert("Đây là nguyên  âm");
+     break;
+     default:
+         alert("Đây là phụ âm ");
     }
-
-    kiemTra();
-
 
 
 </script>

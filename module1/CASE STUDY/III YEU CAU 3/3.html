@@ -8,19 +8,43 @@
 <script>
 
 
-        let num = [5,2,5,10];
-        let den = [6,3,4,2];
+//        let num = [5,2,5,10];
+//        let den = [6,3,4,2];
+//
+//        var max = num[0]/den[0];
+//
+//        for (let i = 1; i < num.length; i++) {
+//            if (max < (num[i]/den[i])) {
+//                max=num[i]/den[i];
+//                index = i;
+//            }
+//        }
+//        document.write(num[index] + "/" + den[index] + " là phân số lớn nhất"+"<br>"+" có chỉ số là " + index);
+//
 
-        var max = num[0]/den[0];
+        let num =[];
+        let deno =[];
+        let size = parseInt(prompt("Nhập vào độ dài mảng các phân sôs"));
 
-        for (let i = 1; i < num.length; i++) {
-            if (max < (num[i]/den[i])) {
-                max=num[i]/den[i];
-                index = i;
-            }
+
+        for(let i=0 ;i<size  ;i++){
+            num.push(parseInt(prompt("nhap vào tử số ")));
+            deno.push(parseInt(prompt("nhap vào mẫu số ")));
         }
-        document.write(num[index] + "/" + den[index] + " là phân số lớn nhất"+"<br>"+" có chỉ số là " + index);
-    </script>
+
+       function  maxFraction( num ,deno) {
+            let maxIndex=0;
+            for (let i=1;i<num.length;i++){
+                if (num[maxIndex]* deno[i] < num[i] * deno[maxIndex]){
+                    maxIndex =i;
+                }
+            }
+            return maxIndex;
+       }
+
+        alert(" vị trí chỉ số của phân số lớn nhất là :" + maxFraction(num ,deno));
+
+</script>
 
 </body>
 </html>

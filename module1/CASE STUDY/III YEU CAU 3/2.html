@@ -8,24 +8,53 @@
 
 
 <script>
-    let a = [7,2,5,3,5,3];
-    let b =  [7,2,5,4,6,3,5,3];
-    let Value = [];
-    for (let i = 0; i < b.length; i++) {
-        for (let j = 0; j < a.length; j++) {
-            if (b[i] === a[j]){
-                b[i] = 1;
-            }
-        }
-        if (b[i] !== 1) {
-            Value.push(b[i]);
+    // let a = [7,2,5,3,5,3];
+    // let b =  [7,2,5,4,6,3,5,3];
+    // let Value = [];
+    // for (let i = 0; i < b.length; i++) {
+    //     for (let j = 0; j < a.length; j++) {
+    //         if (b[i] === a[j]){
+    //             b[i] = 1;
+    //         }
+    //     }
+    //     if (b[i] !== 1) {
+    //         Value.push(b[i]);
+    //     }
+    // }
+    // let arr2 = [...new Set(Value)];
+    // arr2.sort(function (a,b) {
+    //     return a - b;
+    // })
+    // console.log(arr2);
+
+    let arrA =[];
+    let arrB =[];
+    let result=[];
+
+    let sizeA=parseInt(prompt("nhạp độ dài mảng A"));
+    for(let i=0 ;i<sizeA ;i++){
+        arrA.push(parseInt(prompt("nhap vào số nguyên  trong mảng A")));
+    }
+
+    let sizeB=parseInt(prompt("nhạp độ dài mảng B"));
+    for(let i=0 ;i<sizeB ;i++){
+        arrB.push(parseInt(prompt("nhap vào số nguyên trong mảng B ")));
+    }
+
+    for( let i=0 ;i<sizeB ;i++){
+        if (arrA.indexOf(arrB[i]) === -1 && result.indexOf(arrB[i] === -1)){
+            result.push(arrB[i]);
         }
     }
-    let arr2 = [...new Set(Value)];
-    arr2.sort(function (a,b) {
-        return a - b;
-    })
-    console.log(arr2);
+
+    result.sort(function (a,b){
+        return a-b;
+    }
+
+    );
+    alert("mảng A: "+ arrA +"\nmảng B: "+ arrB + "\ncác số nguyen xuat hien trong mang B nhung lại không xuât hiện trong mảng A là: " + result);
+
+
 </script>
 </body>
 </html>

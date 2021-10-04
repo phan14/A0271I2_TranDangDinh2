@@ -5,20 +5,33 @@
     <title>Title</title>
 </head>
 <body>
-<script>
-    let number= parseInt(prompt("nhập độ dài của chuỗi"));
-    let array=[];
-    for (let i=0;i<number;i++){
-        array[i]= prompt("nhập  phần tử vào mảng vị tri"+i)
-    }
-    array.sort();
-    let chuoi=[];
-    for (let i=0;i<array.length;i++){
-        if (array[i]!==array[i+1]){
-            chuoi.push(array[i])
-        }
-    } document.write("Có " + chuoi.length + " ký tự khác nhau, đó là: " + chuoi.join(" "))
 
+<script>
+
+//    let count = 0;
+//    function bai2(){
+//        let s = prompt("nhap xau ");
+//        for( let i=0; i < s.length; i++) {
+//            if (s.indexOf(s.charAt(i)) === i) {
+//                count++;
+//            }
+//        }
+//        document.write( "kết quả xâu khác(s) = "+count );
+//    }
+//    bai2();
+
+    function differentSymbolsNaive(str) {
+        let arr = [];
+        for (let i=0 ;i<str.length ;i++){
+            if ( arr.indexOf(str.charAt(i)) === -1){
+                arr.push(str.charAt(i));
+            }
+        }
+        return arr.length;
+    }
+    let str = prompt("nhập vào xâu ký tự ");
+    alert("có: " + differentSymbolsNaive(str) +" kí tự khác nhau");
+    
 </script>
 </body>
 </html>

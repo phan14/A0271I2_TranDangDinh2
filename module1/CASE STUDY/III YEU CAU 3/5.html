@@ -4,70 +4,113 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<p>1: Cafe</p>
-<p>2: Cam vắt</p>
-<p>3: Nước ép cà rốt</p>
-<p>4: Nước ép cà chua</p>
-<p>5: Nước lọc</p>
-<p>6: Nước dừa</p>
-<p>7: thoát</p>
+<!--<body>-->
+<!--<p>1: Cafe</p>-->
+<!--<p>2: Cam vắt</p>-->
+<!--<p>3: Nước ép cà rốt</p>-->
+<!--<p>4: Nước ép cà chua</p>-->
+<!--<p>5: Nước lọc</p>-->
+<!--<p>6: Nước dừa</p>-->
+<!--<p>7: thoát</p>-->
 
 
 
 
-<button onclick="myFunction()">Chọn nước uống</button>
+<!--<button onclick="myFunction()">Chọn nước uống</button>-->
 
 <script>
 
-    function myFunction() {
-        let number;
-        let sum=0;
-        do{
-            var chon = prompt("Mời bạn chọn nước uống");
+    // function myFunction() {
+    //     let number;
+    //     let sum=0;
+    //     do{
+    //         var chon = prompt("Mời bạn chọn nước uống");
+    //
+    //         switch (chon) {
+    //             case "1":
+    //                 alert("cafe -19.000đ");
+    //                 number = parseInt(prompt("Nhập số lượng: "));
+    //                 sum += (number * 19000);
+    //                 break;
+    //             case "2":
+    //                 alert("Cam vắt-10.000đ ");
+    //                 number = parseInt(prompt("Nhập số lượng: "));
+    //                 sum += (number * 10000);
+    //                 break;
+    //             case "3":
+    //                 alert("Nước ép cà rốt -16.000đ");
+    //                 number = parseInt(prompt("Nhập số lượng: "));
+    //                 sum += (number * 16000);
+    //                 break;
+    //             case "4":
+    //                 alert("Nước ép cà chua -11.000đ");
+    //                 number = parseInt(prompt("Nhập số lượng: "));
+    //                 sum += (number * 11000);
+    //                 break;
+    //             case "5":
+    //                 alert("Nước lọc -14.000đ");
+    //                 number = parseInt(prompt("Nhập số lượng: "));
+    //                 sum += (number * 14000);
+    //                 break;
+    //             case "6":
+    //                 alert("Nước dừa -18.000đ");
+    //                 number = parseInt(prompt("Nhập số lượng: "));
+    //                 sum += (number * 18000);
+    //                 break;
+    //             case "7":
+    //                 alert("Cảm ơn quý khách!");
+    //                 break;
+    //             default:
+    //                 alert("Vui long nhan so tu 1 den 7");
+    //                 break;
+    //         }
+    //     }while (chon !== 7);
+    //     alert("Tổng tiền là: " + sum + "vnd");
+    //
+    // }
 
-            switch (chon) {
-                case "1":
-                    alert("cafe -19.000đ");
-                    number = parseInt(prompt("Nhập số lượng: "));
-                    sum += (number * 19000);
-                    break;
-                case "2":
-                    alert("Cam vắt-10.000đ ");
-                    number = parseInt(prompt("Nhập số lượng: "));
-                    sum += (number * 10000);
-                    break;
-                case "3":
-                    alert("Nước ép cà rốt -16.000đ");
-                    number = parseInt(prompt("Nhập số lượng: "));
-                    sum += (number * 16000);
-                    break;
-                case "4":
-                    alert("Nước ép cà chua -11.000đ");
-                    number = parseInt(prompt("Nhập số lượng: "));
-                    sum += (number * 11000);
-                    break;
-                case "5":
-                    alert("Nước lọc -14.000đ");
-                    number = parseInt(prompt("Nhập số lượng: "));
-                    sum += (number * 14000);
-                    break;
-                case "6":
-                    alert("Nước dừa -18.000đ");
-                    number = parseInt(prompt("Nhập số lượng: "));
-                    sum += (number * 18000);
-                    break;
-                case "7":
-                    alert("Cảm ơn quý khách!");
-                    break;
-                default:
-                    alert("Vui long nhan so tu 1 den 7");
-                    break;
-            }
-        }while (chon != 7);
-        alert("Tổng tiền là: " + sum + "vnd");
+    let menu = "Mời bạn chọn đồ uống\n" +
+            "1 . cafe \n"+
+            "2 . Cam vắt \n"+
+            "3 . Nước ép cà rốt \n"+
+            "4 . Nước ép cà chua \n"+
+            "5 . Nước lọc \n"+
+            "6 . Nước dừa \n"+
+            "7 . Thoát chọn đồ uống \n";
 
-    }
+    let choose;
+    let total =0;
+    do {
+        choose =parseInt(prompt(menu));
+        let amount =0;
+        let price =0;
+        switch (choose) {
+            case 1:
+            price =10000;
+            break;
+            case 2:
+                price =15000;
+                break;
+            case 3:
+                price =17000;
+                break;
+            case 4:
+                price =18000;
+                break;
+            case 5:
+                price =7000;
+                break;
+            case 6:
+                price =12000;
+                break;
+             case 7:
+                    continue;
+        }
+        amount = parseInt(prompt("nhập vào số lượng đò uống"));
+        total +=amount*price;
+    } while ( choose !== 7);
+    alert(" tổng số tiền phải trả là :" +total);
+
 
 </script>
 </body>

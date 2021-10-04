@@ -6,34 +6,19 @@
 </head>
 <body>
 <script>
-    function tinh() {
-        let  thuesuat;
-      let sothue,luongrong=0;
-        let luong=prompt("nhập số tiền lương");
-        if(luong>15)
-        {
-            sothue=luong*20/100;
-            thuesuat=20;
-        }
-        else if(luong>=7)
-        {
-            sothue=luong*10/100;
-            thuesuat=10;
-        }
-        else
-        {
-            sothue=luong*5/100;
-            thuesuat=5;
-        }
-        luongrong=luong-sothue;
-        document.write( "Luong = " + luong );
-        document.write("<br>");
-        document.write( "Thue thu nhap voi muc thue suat " + thuesuat + "% = " + sothue );
-        document.write("<br>");
-        document.write( "So tien luong ban nhan la = " +luongrong );
-        return 0;
+    let luong =parseInt(prompt("nhập tiền lương"));
+    let thue =0;
+    let luongrong =0;
+    if( luong >=15000000){
+        thue =20;
+    }else if( thue>= 7000000){
+        thue =10;
+    } else {
+        thue =5;
     }
-    tinh();
+    luongrong =luong-luong*thue/100;
+    alert("thue:"+thue +"%\n" + "luong nhan duoc: "+ luongrong )
+
 </script>
 </body>
 </html>

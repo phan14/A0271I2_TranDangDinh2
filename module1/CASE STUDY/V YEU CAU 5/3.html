@@ -1,24 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Title</title>
 </head>
 <body>
 <script>
+    let n=prompt("Nhập vào chiều dài của mảng 2 chiều");
+    let m=prompt("Nhập vào chiều mảng 2 chiều");
+    let array = [];
+    for(var i=0;i<n;i++){
+        array[i]= [];
+        for (var j=0;j<m;j++){
+            array[i][j]=parseInt(prompt("Nhập vào phần tử thứ: "+j+" của mảng: "+(i+1)));
+        }
+    }
+    let max=array[0][0];
+    for(let x=0;x<2;x++){
+        for(let y=1;y<m;y++){
+            if(max<array[x][y]){
+                max=array[x][y];
+            }
 
-    let arr = [[12,45,75,59,100], [54,45,2],[23,54,75,2]];
+        }
+    }
+    document.write("số lớn nhất trong mảng là"+max+"<br>");
+    let min=array[0][0];
+    for(let x=0;x<2;x++){
+        for(let y=1;y<m;y++){
+            if(min>array[x][y]){
+                min=array[x][y];
+            }
+        }
+    }
+    document.write("số nhỏ nhất trong mảng là"+min);
 
-    let max = Math.max(...[].concat(...arr));
-
-    let min = Math.min(...[].concat(...arr));
-
-    console.log("số lớn nhất"+max);
-
-    console.log("số lớn nhất"+min);
 </script>
 </body>
 </html>

@@ -8,10 +8,14 @@
 <script>
     class sach {
         constructor() {
+            this.code = 0;
             this.tensach = "";
             this.nam = 0;
             this.soquyen = 0;
             this.trinhtang = false;
+        }
+        setCode(code){
+            this.code = code;
         }
         setTensach(tensach){
             this.tensach = tensach;
@@ -27,10 +31,13 @@
         }
         class kiemtraSach {
         constructor(tensach, nam, soquyen,trinhtang) {
-            this.channel = channel;
-            this.volume = volume;
-            this.status = status;
-        }
+            this.tensach = tensach;
+            this.nam = nam;
+            this.soquyen = soquyen;
+            this.trinhtang = trinhtang;
+
+
+    }
 
 
 </script>

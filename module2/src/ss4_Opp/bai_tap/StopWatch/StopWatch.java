@@ -24,6 +24,7 @@ public class StopWatch {
     //  -------------
 
     public void start() {
+
         this.startTime = new Date();
     }
 
@@ -34,7 +35,7 @@ public class StopWatch {
 
 //=========
 public float getElapsedTime() {
-        return (float)(this.endTime.getTime() - this.startTime.getTime());
+        return (long)(this.endTime.getTime() - this.startTime.getTime());
 }
 
 }

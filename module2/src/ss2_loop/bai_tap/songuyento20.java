@@ -11,19 +11,19 @@ public class songuyento20 {
        int num=input.nextInt();
 
        int count=0;
-        for(int N = 2; count < num; ++N) {
+        for(int n = 2; count < num; ++n) {
             int i = 2;
 
             boolean check;
-            for(check = true; (double)i <= Math.sqrt((double)N); ++i) {
-                if (N % i == 0) {
+            for(check = true; (double)i <= Math.sqrt((double)n); ++i) {
+                if (n % i == 0) {
                     check = false;
                     break;
                 }
             }
 
             if (check) {
-                System.out.println(N);
+                System.out.println(n);
                 ++count;
             }
         }

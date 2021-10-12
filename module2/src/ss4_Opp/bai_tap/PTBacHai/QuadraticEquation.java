@@ -39,7 +39,9 @@ public class QuadraticEquation {
     }
 
     public void getRoot() {
-        if (this.getDiscriminant() < 0.0D) {
+        if(this.getA()==0.0D){
+            System.out.println("Không thỏa mản chương trình");
+        } else if (this.getDiscriminant() < 0.0D) {
             System.out.print("Phương trình đã cho vô nghiệm");
         } else if (this.getDiscriminant() == 0.0D) {
             System.out.print("Phương trình đã cho có nghiệm kép là: x = " + this.getRoot1());

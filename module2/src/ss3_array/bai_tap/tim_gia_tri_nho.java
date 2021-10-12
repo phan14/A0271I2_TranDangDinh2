@@ -10,23 +10,23 @@ public class tim_gia_tri_nho {
         int size = Integer.parseInt(scanner.nextLine());
         int[] array = new int[size];
 
-        int min;
-        for(min = 0; min < array.length; ++min) {
-            System.out.print(" phần tử vào mảng thứ " + min+" :");
-            array[min] = Integer.parseInt(scanner.nextLine());
+        int i;
+        for(i = 0; i < array.length; ++i) {
+            System.out.print(" phần tử vào mảng thứ " + i+" :");
+            array[i] = Integer.parseInt(scanner.nextLine());
         }
         System.out.println("mảng vừa tạo là :" + Arrays.toString(array));
-        min = array[0];
+        i = array[0];
         int index = 0;
 
         for(int j = 1; j < array.length; ++j) {
-            if (array[j] < min) {
-                min = array[j];
+            if (array[j] < i) {
+                i = array[j];
                 index = j;
             }
         }
 
-        System.out.println("Giá trị nhỏ nhất trong mảng là :" + min + " \ncó vị trí là : " + index);
+        System.out.println("Giá trị nhỏ nhất trong mảng là :" + i + " \ncó vị trí là : " + index);
     }
 }
 

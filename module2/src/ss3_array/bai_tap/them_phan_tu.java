@@ -1,33 +1,33 @@
 package ss3_array.bai_tap;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class them_phan_tu {
     public static void main(String[] args) {
+        int[] arr = new int[]{1, 8, 2};
         Scanner scanner = new Scanner(System.in);
-        System.out.println("nhập vào chiều dài của mảng");
-        int N = Integer.parseInt(scanner.nextLine());
-        int[] array = new int[N];
+        System.out.print("Nhập phần tử cần chèn: ");
+        int x = scanner.nextInt();
+        System.out.print("Nhập vị trí cần chèn: ");
+        int index = scanner.nextInt();
+        System.out.println("Mảng ban đầu: " + Arrays.toString(arr));
+        if (index <= 1 && index >= arr.length - 1) {
+            System.out.println("Không chèn được phần tử vào mảng");
+        } else {
+            int[] result = new int[arr.length + 1];
+            int j = 0;
 
-        int X;
-        for(X = 0; X < array.length; X++) {
-            System.out.println("hãy nhập phần tử có vị trí là " + X);
-            array[X] = Integer.parseInt(scanner.nextLine());
+            for(int i = 0; i < arr.length; ++i) {
+                if (i == index) {
+                    result[j++] = x;
+                }
+
+                result[j++] = arr[i];
+            }
+
+            System.out.println("Mảng sau khi thêm: " + Arrays.toString(result));
         }
-        System.out.println("mảng vừa tạo là" + Arrays.toString(array));
 
-
-        System.out.println("nhập phần từ mà bạn muốn thêm");
-        X = Integer.parseInt(scanner.nextLine());
-        System.out.println("nhập vị trí bạn muốn thêm");
-        int a = Integer.parseInt(scanner.nextLine());
-        if (a <= 1 && a >= array.length - 1) {
-            System.out.println("không thêm được phần tử vào mảng");
-        }
-
-        array[a] = X;
-        System.out.print("Mảng sau khi chèn phần tử " + X + " là: " + Arrays.toString(array));
     }
 }

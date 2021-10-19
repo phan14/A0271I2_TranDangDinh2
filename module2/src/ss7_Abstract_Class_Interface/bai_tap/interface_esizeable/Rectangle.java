@@ -1,10 +1,12 @@
-package ss6_ke_thua.thuc_hanh;
+package ss7_Abstract_Class_Interface.bai_tap.interface_esizeable;
 
-public class Rectangle extends Shape {
+import ss6_ke_thua.thuc_hanh.Shape;
+
+public class Rectangle extends Shape implements Resizeable{
     private double width = 1.0;
     private double length = 1.0;
 
-    public Rectangle() {
+    public Rectangle(int i) {
     }
 
     public Rectangle(double width, double length) {
@@ -50,5 +52,11 @@ public class Rectangle extends Shape {
                 + getLength()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.length += this.length * percent/100;
+        this.width += this.width * percent/100;
     }
 }

@@ -1,8 +1,7 @@
-package ss6_ke_thua.bai_tap.LopCircle;
+package ss6_ke_thua.bai_tap.lop_circleva_lop_cylinder;
 
 public class Circle {
-
-    private double radius;
+   private double radius;
     private String color;
 
     public Circle() {
@@ -30,10 +29,11 @@ public class Circle {
     }
 
     public double getArea() {
-        return this.radius * this.radius * 3.141592653589793D;
+        return this.radius * this.radius * Math.PI;
     }
 
     public String toString() {
-        return "Hình tròn có bán kính =" + this.getRadius() + "\n và có màu sắc là: " + this.getColor() + "\n";
+        return "Hình tròn có bán kính =" + this.getRadius() + " và có màu sắc là: " + this.getColor() + ",";
     }
 }
+

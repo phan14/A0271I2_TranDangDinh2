@@ -1,8 +1,9 @@
-package ss6_ke_thua.thuc_hanh;
+package ss7_Abstract_Class_Interface.thuc_hanh.Comparable_hinh_hoc;
+
 
 public class Rectangle extends Shape {
-    private double width = 1.0;
-    private double length = 1.0;
+    private double width = 1.0D;
+    private double length = 1.0D;
 
     public Rectangle() {
     }
@@ -19,7 +20,7 @@ public class Rectangle extends Shape {
     }
 
     public double getWidth() {
-        return width;
+        return this.width;
     }
 
     public void setWidth(double width) {
@@ -27,7 +28,7 @@ public class Rectangle extends Shape {
     }
 
     public double getLength() {
-        return length;
+        return this.length;
     }
 
     public void setLength(double length) {
@@ -35,20 +36,14 @@ public class Rectangle extends Shape {
     }
 
     public double getArea() {
-        return width * this.length;
+        return this.width * this.length;
     }
 
     public double getPerimeter() {
-        return 2 * (width + this.length);
+        return 2.0D * (this.width + this.length);
     }
 
-    @Override
     public String toString() {
-        return "A Rectangle with width="
-                + getWidth()
-                + " and length="
-                + getLength()
-                + ", which is a subclass of "
-                + super.toString();
+        return "A Rectangle with width=" + this.getWidth() + " and length=" + this.getLength() + ", which is a subclass of " + super.toString();
     }
 }

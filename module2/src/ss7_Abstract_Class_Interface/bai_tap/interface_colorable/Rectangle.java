@@ -1,4 +1,4 @@
-package ss6_ke_thua.thuc_hanh;
+package ss7_Abstract_Class_Interface.bai_tap.interface_colorable;
 
 public class Rectangle extends Shape {
     private double width = 1.0;

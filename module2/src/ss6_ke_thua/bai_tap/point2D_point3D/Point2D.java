@@ -31,7 +31,7 @@ public class Point2D {
         this.y = y;
     }
 
-    public void setxy(){
+    public void setxy( float x,float y){
       this.x=x;
       this.y=y;
 

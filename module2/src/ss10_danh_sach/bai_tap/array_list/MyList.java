@@ -4,120 +4,142 @@ import java.util.Arrays;
 
 
 public class MyList<E> {
-    private int size = 0;
-    private static final int DEFAULT_CAPACITY = 10;
-    Object elements[];
+    int size = 0;
+    public static final int DEFAULT_CAPACITY = 10;
+    public Object elements[];
 
     public MyList() {
         elements = new Object[DEFAULT_CAPACITY];
     }
 
     public MyList(int capacity) {
-        if (capacity >=0){
-       elements = new Object[capacity];
-    }else {
-            throw new IllegalArgumentException("capacity: " +capacity);
+        if (capacity >= 0) {
+            elements = new Object[capacity];
+        } else {
+            throw new IllegalArgumentException("capacity: " + capacity);
         }
+
     }
 
-//    phuong thuc tra ve so luong phan tu
-    public int size(){
+    /**
+     * method add vao 1 vi tri nhat dinh voi phan tu la element
+     */
+
+    public void add(int index, E element) {
+        if (index > elements.length) {
+            throw new IllegalArgumentException("index: " + index);
+        } else if (elements.length == size) {
+            this.ensureCapacity(1);
+        }
+
+        if (elements[index] != null) {
+            for (int i = size + 1; i >= index; i--) {
+                elements[i] = elements[i - 1];
+            }
+        }
+        elements[index] = element;
+        size++;
+    }
+
+    /**
+     * trả về số lượng phần tử có trong mảng
+     */
+    public int size() {
         return this.size;
     }
-//phuong thuc clear Arraylist
-    public void clear(){
-        size=0;
-        for (int i = 0; i<elements.length ;i++){
-            elements[i] =null;
+
+    /**
+     * trả về một mảng rỗng
+     */
+    public void clean() {
+        size = 0;
+        for (int i = 0; i < elements.length; i++) {
+            elements[i] = null;
         }
     }
 
-
-//phương thức add 1 phần tử
-    public boolean add(E element){
-        if (elements.length == size){
-            this.ensureCapacity(5);
+    /**
+     * thêm vào 1 phần tử vào cuối mảng
+     */
+    public boolean add(E element) {
+        if (elements.length == size) {
+            this.ensureCapacity(1);
         }
-        elements[size] =element;
+        elements[size] = element;
         size++;
         return true;
     }
 
+    /**
+     * Giới hạn lại capacity của mảng
+     */
+    public void ensureCapacity(int minCapacity) {
+        if (minCapacity >= 0) {
+            int newSize = this.elements.length + minCapacity;
+            elements = Arrays.copyOf(elements, newSize);
 
-    public  void add(E element ,int index){
-        if (index >elements.length){
-            throw new IllegalArgumentException("index" +index);
-        }else if (elements.length ==size){
-            this.ensureCapacity(5);
-        }
-
-        if (elements[index] == null){
-            elements[index] =element;
-            size++;
-        }else {
-            for (int i =size+1 ;i>=index ;i--){
-                elements[i] =elements[i-1];
-            }
-            elements[index] =element;
-            size++;
+        } else {
+            throw new IllegalArgumentException("minCapacity: " + minCapacity);
         }
     }
 
-
-
-
-//    phương thức tăng kích thước
-    public void ensureCapacity( int minCapacity){
-        if (minCapacity >=0){
-            int newSize =this.elements.length +minCapacity;
-            elements = Arrays.copyOf(elements,newSize);
-        }else {
-            throw new IllegalArgumentException("minCapacity" + minCapacity);
-        }
-    }
-
-//   phương thức lấy 1 elements tại vị trí index
-    public E get(int index){
+    /**
+     * lay 1 phan tu o vi tri index duoc nhap vao
+     */
+    public E get(int index) {
         return (E) elements[index];
     }
 
-
-//phương thức lấy index của 1 phần tử
-    public int indexOf( E element){
-        int index =-1;
-        for (int i = 0;i<size ;i++){
-            if (this.elements[i].equals(element)){
+    /**
+     * kiem tra 1 phan tu co trong mang hay khong? neu co tra ve vi tri
+     * con khong thi tra ve -1
+     */
+    public int indexOf(E element) {
+        int index = -1;
+        for (int i = 0; i < size; i++) {
+            if (elements[i].equals(element)) {
                 return i;
             }
         }
         return index;
     }
 
-
-//phương thức kiểm tra 1 phần tử có trong arraylist
-    public boolean contains (E element){
-        return this.indexOf(element)>=0;
+    /**
+     * kiem tra 1 phan tu co trong mang hay khong neu co thi tra ve true va nguoc lai
+     */
+    public boolean contains(E element) {
+        return this.indexOf(element) >= 0;
     }
 
-//phương thức tạo ra 1 bản sao từ mảng ban đầu
-    public MyList<E> clone(){
-        MyList<E> v=new MyList<>();
-        v.elements=Arrays.copyOf(this.elements,this.size);
-        v.size=this.size;
-        return v;
+    /**
+     * clone 1 ban sao cua MyList cu sang 1 Mylist moi
+     */
+    public MyList<E> clone() {
+        MyList<E> cloneList = new MyList();
+        cloneList.elements = Arrays.copyOf(this.elements, this.size);
+        cloneList.size = this.size;
+        return cloneList;
     }
 
-
-    public E remove(int index){
-        if (index <0 || index>elements.length){
-            throw new IllegalArgumentException("Error index:"+index);
+    /*
+     * xoa 1 phan tu o vi tri chi dinh, tra ve gia tri phan tu do
+     */
+    public E remove(int index) {
+        if (index < 0 || index > elements.length) {
+            throw new IllegalArgumentException("Error index: " + index);
         }
-        E element =(E) elements[index];
-        for (int i = index ; i < size -1; i++){
-            elements[i] =elements[i+1];
+        E element = (E) elements[index];
+        for (int i = index; i < size - 1; i++) {
+            elements[i] = elements[i + 1];
         }
-        elements[size-1]=null;
+        elements[size - 1] = null;
         size--;
         return element;
+
     }
-    }
+
+
+}
+
+
+

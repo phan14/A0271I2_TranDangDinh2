@@ -91,27 +91,6 @@ public class ProductManager {
     });
   }
 
-//hàm sắp xếp
-//
-//     public void sapXepGiamDan() {
-//      Collections.sort(this.ds, new Comparator<Product>() {
-//          @Override
-//          public int compare(Product o1, Product o2) {
-//              return (int) (o1.getValue()-o2.getValue());
-//          }
-//      });
-//
-// }
-//
-//    public void sapXepTangDan() {
-//        Collections.sort(this.ds, new Comparator<Product>() {
-//            @Override
-//            public int compare(Product o1, Product o2) {
-//                return (int) (o2.getValue()-o1.getValue());
-//            }
-//        });
-//
-//    }
 
 
 }

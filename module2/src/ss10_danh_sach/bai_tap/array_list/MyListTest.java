@@ -1,81 +1,41 @@
 package ss10_danh_sach.bai_tap.array_list;
 
-public class MyListTest {
-    public static class Student{
-        private int id;
-        private String name;
+class MyArrayListTest {
+    static class Person{
+        String name;
+        int Age;
 
-        public Student() {
-        }
-
-        public Student(int id, String name) {
-            this.id = id;
+        Person(String name, int age) {
             this.name = name;
+            Age = age;
         }
 
-        public int getId() {
-            return id;
+        @Override
+        public String toString() {
+            return "Person{" +
+                    "name='" + name + '\'' +
+                    ", Age=" + Age +
+                    '}';
         }
 
-        public void setId(int id) {
-            this.id = id;
+        @Override
+        public boolean equals(Object obj) {
+            return this.name.equals(((Person) obj).name)
+                    && this.Age == ((Person) obj).Age;
         }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-
-        public static void main(String[] args) {
-            Student a=new Student(1,"Huy");
-            Student b=new Student(2,"Tuấn");
-            Student c=new Student(3,"Anh");
-            Student d=new Student(4,"Dũng");
-            Student e=new Student(5,"Hùng");
-            Student f=new Student(6,"Hùng2");
-
-
-            MyList<Student> studentMyList =new MyList<>();
-            MyList<Student> newMyList =new MyList<>();
-
-
-            studentMyList.add(a);
-            studentMyList.add(b);
-            studentMyList.add(c);
-            studentMyList.add(d);
-            studentMyList.add(e);
-//            studentMyList.add(f,2);
-            studentMyList.size();
-
-//            System.out.println("kích thước phần tử\t"+studentMyList.size()+"\n");
-//
-//            System.out.println(studentMyList.get(2).getName());
-
-//            System.out.println(studentMyList.indexOf(c));
-//            System.out.println(studentMyList.contains(c));
-//            System.out.println(studentMyList.contains(f));
-
-            newMyList = studentMyList.clone();
-            Student student = newMyList.remove(0);
-            System.out.println(student.getName());
-//            for (int i =0; i<newMyList.size();i++){
-//                System.out.println(newMyList.get(i).getName());
-//            }
-
-
-
-
-//            for (int i = 0; i<studentMyList.size();i++){
-//                Student student =(Student) studentMyList.elements[i];
-//                System.out.println(student.getId());
-//                System.out.println(student.getName());
-//
-//            }
-
+    }
+    public static void main(String[] args) {
+        MyArrayList<Person> myArrayList = new MyArrayList<>(3);
+        myArrayList.ensureCapacity(4);
+        myArrayList.add(new Person("Zidanene Zidane ", 42));
+        myArrayList.add(new Person("Lionel Messi ", 33));
+        myArrayList.add(new Person("Cristiano Ronaldo ", 36));
+        myArrayList.add(new Person("Ronaldo beo ", 43),1);
+        MyArrayList<Person> list2 = myArrayList.clone();
+        int index = list2.indexOf(new Person("Nguyễn Văn C ", 30));
+        System.out.println("index = " + index);
+        for (int i = 0; i < list2.size(); i++ ){
+            System.out.println(myArrayList.get(i).toString());
         }
     }
 }

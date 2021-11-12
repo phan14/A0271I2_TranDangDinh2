@@ -10,9 +10,9 @@ public class Main {
     public static void main(String[] args) {
         ReadAndWrite object = new ReadAndWrite();
         List<SanPham> ds = new ArrayList<>();
-        ds.add(new SanPham("BCR11", "Bàn chải chà bồn cầu","ToiletCare", (float) 45.5,"bệ sinh bồn cầu chuyên dụng"));
-        ds.add(new SanPham("V22", "VIM","ToiletCare", 60,"Nước sát khuẩn bồn cầu"));
-        ds.add(new SanPham("LS33", "Sun light","HomeCare", 55,"Nước lau sàn"));
+        ds.add(new SanPham("A01", "Iphone11","My", (float) 45.5,"bền bỉ"));
+        ds.add(new SanPham("A02", "SamSung","HanQuoc", 60,"tầm trung"));
+        ds.add(new SanPham("A03", "Nokia","TrungQUoc", 55,"ít người dùng"));
         //tạo file
         File file = new File("src\\ss17_Binary_File_Serialization\\bai_tap\\danhsach.csv");
 //        goi ham write

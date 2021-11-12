@@ -18,7 +18,7 @@ public class Main {
 //        goi ham write
         object.writeToFile(file,ds);
 //        gọi hàm đọc
-        List<SanPham> result = object.readFile(file); //đã ép kiểu trong hàm
+        List<SanPham> result = object.readFile(file);
         for (SanPham element: result) {
             System.out.println(element);
         }

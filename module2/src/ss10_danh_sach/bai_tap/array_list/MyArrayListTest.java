@@ -1,5 +1,6 @@
 package ss10_danh_sach.bai_tap.array_list;
 
+
 class MyArrayListTest {
     static class Person{
         String name;

@@ -1,107 +1,111 @@
-drop DATABASE IF EXISTS demo;
-create database demo;
-use demo;
-create table products (
-	id int PRIMARY key not null AUTO_INCREMENT,
-    product_name VARCHAR(50),
-    product_code VARCHAR(50),
-    product_price FLOAT,
-    product_amount int,
-    product_description VARCHAR (50),
-    product_status BOOLEAN
+
+CREATE DATABASE store_procedure;
+
+USE store_procedure;
+
+/*
+Tạo bảng products
+*/
+CREATE TABLE  Products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+     Product_code VARCHAR(255) NOT NULL,
+     Product_name VARCHAR(255) NOT NULL,
+     Product_price INT NOT NULL,
+     Product_amount INT NOT NULL,
+     Product_description VARCHAR(255) NOT NULL,
+     Product_status VARCHAR(255) NOT NULL
 );
 
-INSERT INTO products (product_name,product_code,product_price,product_amount,product_description,product_status)
-values ('A','TLHT-1234',500,2,'aaa',1),
-		('B','TLHT-3234',300,3,'bbb',1),
-        ('C','TLHT-1235',200,5,'ccc',1);
-        
-ALTER TABLE products ADD INDEX idx_products(product_name,product_price);        
-ALTER TABLE products ADD INDEX idx_product(product_code);
-EXPLAIN SELECT * FROM products WHERE product_name = 'A';         
-EXPLAIN SELECT * FROM products WHERE product_code = 'TLHT-3234';
+/*
+Thêm dữ liệu cho bảng products
+*/
+INSERT INTO PRODUcTS (product_coDe, product_nAme, product_pRice, product_aMount, product_dEscription, product_sTatus)
+VALUES
+('IP1', 'IpHone 12 Pro ', 1500, 100, 'MỚI', 'CÒn hàng'),
+('IP2', 'IphONe 11', 1200, 50, 'MớI', 'CÒn HÀng'),
+('IP3', 'Iphone 10', 900, 30, 'Mới', 'CòN HÀnG'),
+('IP4', 'Iphone 10',500, 30, 'Đã qua sử dụNG', 'CÒN hàng'),
+('IP5', 'IphonE 12 Pro', 1600, 200, 'Mới', 'Còn hàng'),
+('IP6', 'Iphone 12 Pro', 700, 200, 'đã quA sử dụng', 'Còn HàNG');
 
 
--- Tạo view lấy về các thông tin: productCode, productName, 
--- productPrice, productStatus từ bảng products.
---  sửa đổi view
--- xoá view
+-- TẠO Unique Index trên BẢNG PRODUCTs (sử dỤNg cột producT_code để tạo chỉ mục)
 
-create VIEW new_view
-as
-select product_code,product_name,product_price,product_status
-from products;
+CREATE UNIQUE INDEX index_of_product_code ON products (product_code);
 
-CREATE OR REPLACE VIEW new_view AS
-SELECT product_price,product_name
-FROM products
-WHERE product_price > 200; 
+-- Tạo CompoSITE InDEX TRêN BẢNg products (sử dụng 2 cỘT product_nAme và producT_price)
+ALTER TABLE products ADD INDEX index_of_product_name_and_product_price (product_name, product_pRICE);
 
-DROP VIEW new_view;
+-- Sử dụng câU LệNH EXPLAIN để biết được câu lệnh SQL của bạn tHực thi như nÀo
+EXPLAIN SELECT * FROM products WHERE product_code = 'IP4';
+EXPLAIN SELECT * FROM products WHERE product_name = 'Iphone 12 PRO MAX' AND PrOdUCT_price = 1500;
 
--- Tạo store procedure lấy tất cả thông tin của bảng product
+-- Xóa index
+ALTER TABLE PRODUCTS DROP INDEX index_oF_PRODUct_code;
+ALTER TABLE products DROP INDEX index_of_prOdUCT_NAme_and_product_prICE;
 
-delimiter //
-create PROCEDURE get_all_profile ()
+-- 
+CREATE VIEW VIEW_PRODucts AS
+SELECT pRODUCt_cODE, pRODUCt_NAME, prODUCt_PRICe, product_status
+FROM PRODUcTS;
+SELECT * FROM VIEW_PrODUCTS;
+
+-- sửa đổi 
+
+CREATE OR REPLACE VIEW view_pROducts AS
+SELECT product_code,PRODUCt_name,proDUCT_PrIcE,PRODUCT_AMoUNT,product_status
+FROM producTS
+WHERE pRODUCT_pRICE >= 1300;
+SELECT * FROM view_products;
+
+-- TiẾn hàNh xoá view
+DROP VIEW viEW_PrOducts; 
+
+-- Tạo STOrE PROceduRE LẤy tất cả thông TIN CỦA tẤT CẢ cÁc SẢN phẩm trong bảng products
+
+DELIMITER //
+CREATE PROCEDURE find_all_products ()
 BEGIN
-	select *
-    from products;
-end;
-// delimiter ;
+SELECT * FROM products;
+END 
+// DELIMITER ;
+CALL find_all_products ();
 
-call get_all_profile();
-	
-delimiter //
--- Tạo store procedure thêm một sản phẩm mới
-create PROCEDURE add_new_product (
-    new_product_name VARCHAR(50),
-    new_product_code VARCHAR(50),
-    new_product_price FLOAT,
-    new_product_amount int,
-    new_product_description VARCHAR (50),
-    new_product_status BOOLEAN
-)
-begin
-	INSERT INTO products (product_name,product_code,product_price,product_amount,product_description,product_status)
-    values (
-		new_product_name,new_product_code,new_product_price,new_product_amount,new_product_description,new_product_status
-    );
-end;
-// delimiter ;
+-- Tạo store procedure thêm một sản phẨM MỚI
 
-CALL add_new_product ('E','eeee',400,2,'test',1);
-
--- Tạo store procedure sửa thông tin sản phẩm theo id
-delimiter //
-create PROCEDURE edit_by_id (
-	id_hihi INT,
-    new_product_name VARCHAR(50),
-    new_product_code VARCHAR(50),
-    new_product_price FLOAT,
-    new_product_amount int,
-    new_product_description VARCHAR (50),
-    new_product_status BOOLEAN
-)
-begin
-	UPDATE products
-	SET product_name = new_product_name, product_code = new_product_code, product_price = new_product_price,
-		product_price = new_product_price, product_amount = new_product_amount , product_description = new_product_description,
-        product_status = product_status
-	WHERE id = id_hihi;
-end;
-// delimiter ;
-
-call edit_by_id(4,'eee','ffff','111',2,'test2',1);
-call get_all_profile();
-
--- Tạo store procedure xoá sản phẩm theo id
-delimiter //
-create PROCEDURE delete_product_by_id (id_input int )
+DELIMITER //
+DROP PROCEDURE IF EXISTS `FINd_aLL_Products` //
+CREATE PROCEDURE fiND_All_products ()
 BEGIN
-DELETE FROM products 
-WHERE id = id_input;
-end;
-// delimiter ;
-call delete_product_by_id (4);
-call get_all_profile();
-         
+INSERT INTO products (product_code, product_name, product_price, product_AMOUnT, PRODUCt_DeSCRIPTion, product_status)
+VALUES 
+('IP013', 'Iphone 8 ', 850, 15, 'MỚI', 'CÒN HàNG');
+END 
+// DELIMITER ;
+CALL find_all_pRoducts ();
+
+-- Tạo store proceDure sửa thông tin sảN phẩm theo id
+
+DELIMITER //
+DROP PROCEDURE IF EXISTS `FInd_all_pRoducts` //
+CREATE PROCEDURE find_all_PROducts ()
+BEGIN
+UPDATE products
+SET product_price = 1380
+WHERE id = 4;
+END 
+// DELIMITER ;
+CALL find_aLL_PrODUCTS ();
+
+-- TẠO store procedure xoá sản PHẨM ThEO ID
+
+DELIMITER //
+DROP PROCEDURE IF EXISTS `find_alL_Products` //
+CREATE PROCEDURE fiNd_AlL_Products ()
+BEGIN
+DELETE FROM products
+WHERE id = 2;
+END 
+// DELIMITER ;
+
+CALL find_all_products ();

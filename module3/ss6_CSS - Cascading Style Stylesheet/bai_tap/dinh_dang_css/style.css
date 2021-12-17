@@ -1,0 +1,19 @@
+
+html{
+    padding: 5px;
+    margin: 5px;
+    font-size: 18px;
+}
+h1{
+
+}
+p{
+    text-indent: 50px;
+    text-align: justify;
+}
+#color-blue{
+    color: blue;
+}
+.color-gr{
+    color: #002b80;
+}

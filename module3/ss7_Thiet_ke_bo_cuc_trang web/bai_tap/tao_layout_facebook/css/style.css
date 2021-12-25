@@ -1,0 +1,105 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+.header_left img{
+    height:40px ;
+}
+
+.user_avatar{
+    border-radius: 50%;
+    width: 45px;
+}
+
+.header{
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
+}
+
+.header_left{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header_input{
+    display: flex;
+    align-items: center;
+    background-color: #eff2f5;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 999px;
+
+}
+
+.header_input input{
+    border: none;
+    background-color: transparent;
+    outline-width: 0;
+}
+
+.header_midle{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+
+}
+
+.header_option i{
+    font-size: xx-large;
+    color: gray;
+}
+
+.header_option i:hover {
+color: blue;
+}
+
+.header_option{
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+.header_option.active i{
+    color: blue;
+}
+/*  */
+
+.header_info{
+    display: flex;
+    align-items: center;
+}
+.header_info h4{
+    margin-left: 10px;
+}
+
+.header_right{
+    display: flex;
+    align-items: center;
+}
+
+.header_right i{
+    color: gray;
+    margin: 0 10px;
+}
+
+/*  */
+.sidebarRow{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-gap: 1px;
+}

@@ -1,4 +1,4 @@
-package thi.consollers.view;
+package thi.view;
 
 import thi.consollers.controller;
 

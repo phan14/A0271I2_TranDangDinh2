@@ -1,4 +1,4 @@
 package thi.services;
 
-public interface ChinhHangService {
+public interface ChinhHangService extends services {
 }

@@ -1,19 +1,18 @@
 package thi.consollers;
 
 import thi.lib.CheckChoice;
-import thi.modles.DienThoaiChinhHang;
+
+import thi.services.DienThoaiChinhHangService;
 
 import java.util.Scanner;
 
-public class controller {
+public class controllerChinhHang {
     public static Scanner sc = new Scanner(System.in);
 
-    public static void displayMenu() {
+    public static void addNew() {
+        DienThoaiChinhHangService dienThoaiChinhHangService = new DienThoaiChinhHangService();
 
-
-        System.out.println("----------CHƯƠNG TRÌNH QUẢN LÝ DIỆN THOẠI--------");
-
-        System.out.println("Chọn chức năng theo số ( để tiếp tục)"+
+        System.out.println("QUẢN LÝ ĐIỆN THOẠI CHÍNH HÃNG \n" +
                 "Chọn chức năng theo số (để tiếp tục):\n" +
                 "1. Thêm mới\n" +
                 "2. Xóa\n" +
@@ -21,21 +20,25 @@ public class controller {
                 "4. Tìm kiếm\n" +
                 "5. Thoát\n");
         int choice = CheckChoice.soNguyen();
-        while (true) {
-            switch (choice) {
-                case 1:
-                    case1.newAdd();
-                    break;
-                case 2:
-
-                    break;
-                case 3:
-                    System.exit(1);
-                    break;
-                default:
-                    System.out.println("Chọn sai,vui lòng chỉ chọn số nguyên từ 1 đến 3");
-            }
+        switch (choice) {
+            case 1:
+                dienThoaiChinhHangService.addNew();
+                break;
+            case 2:
+                dienThoaiChinhHangService.xoa();
+                break;
+            case 3:
+                dienThoaiChinhHangService.displayList();
+                break;
+            case 4:
+                dienThoaiChinhHangService.timKiem();
+                break;
+            case 5:
+                controller.displayMenu();
+            default:
+                System.out.println("Chọn sai,vui lòng chỉ chọn số nguyên từ 1 đến 5");
         }
-
     }
+
 }
+

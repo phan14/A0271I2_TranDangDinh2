@@ -1,4 +1,4 @@
 package thi.services;
 
-public interface XachTayService {
+public interface XachTayService extends services{
 }

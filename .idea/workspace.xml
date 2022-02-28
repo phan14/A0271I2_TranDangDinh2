@@ -20,34 +20,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79b279a2-3984-422f-984e-a234f605b494" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__2_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/12.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/A0271I2_TranDangDinh2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Thuc_hanh.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mi.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module1/CASE STUDY/VII YEU CAU 7/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thuc hanh/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thuc hanh/2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thuc hanh/3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/A0271I2_TranDangDinh2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module3/ss9_tong_quan_ung_dung_web/thuc_hanh/hien_thi_loi_chao/src/main/java/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module3/ss9_tong_quan_ung_dung_web/thuc_hanh/ung_dung_chuyen_doi_tien_te/src/main/java/ConverterServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module3/ss9_tong_quan_ung_dung_web/thuc_hanh/web_hien_thoi_gian_he_thong_/src/main/java/ServerTimeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/CASE STUDY/II YEU CAU 2/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CASE STUDY/II YEU CAU 2/1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/CASE STUDY/II YEU CAU 2/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CASE STUDY/II YEU CAU 2/2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/CASE STUDY/III YEU CAU 3/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CASE STUDY/III YEU CAU 3/1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/CASE STUDY/III YEU CAU 3/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CASE STUDY/III YEU CAU 3/2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/CASE STUDY/III YEU CAU 3/3.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CASE STUDY/III YEU CAU 3/3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/CASE STUDY/III YEU CAU 3/4.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CASE STUDY/III YEU CAU 3/4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/CASE STUDY/III YEU CAU 3/5.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CASE STUDY/III YEU CAU 3/5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/CASE STUDY/IV YEU CAU 4/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CASE STUDY/IV YEU CAU 4/1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/CASE STUDY/IV YEU CAU 4/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CASE STUDY/IV YEU CAU 4/2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/CASE STUDY/V YEU CAU 5/3.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CASE STUDY/V YEU CAU 5/3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/CASE STUDY/VI YEU CAU 6/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CASE STUDY/VI YEU CAU 6/1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A0271I2_TranDangDinh2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss10_danh_sach/bai_tap/array_list/MyList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss10_danh_sach/bai_tap/array_list/MyListTest$Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss10_danh_sach/bai_tap/array_list/MyListTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/bt_Them/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/bt_Them/View/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/bt_Them/controllers/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/bt_Them/controllers/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/bt_Them/controllers/Ycau1.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/bt_Them/controllers/Ycau1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/bt_Them/data/oto.csv" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/bt_Them/data/oto.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/bt_Them/models/OTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/bt_Them/models/OTo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/bt_Them/models/QuanLy.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/bt_Them/models/QuanLy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/bt_Them/models/XeMay.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/bt_Them/models/XeMay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/bt_Them/models/XeTai.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/bt_Them/models/XeTai.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/bt_Them/services/OtoServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/bt_Them/services/OtoServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/bt_Them/services/services.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/bt_Them/services/services.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/bt_Them/utils/ReadAndWriteFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/bt_Them/utils/ReadAndWriteFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/bt_Them/utils/RepositoryByteStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/bt_Them/utils/RepositoryByteStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/consollers/controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/consollers/controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/consollers/controllerChinhHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/consollers/controllerChinhHang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/consollers/controllerXachTay.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/consollers/controllerXachTay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/data/mobiles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/data/mobiles.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/lib/CheckChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/lib/CheckChoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/modles/DienThoaiChinhHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/modles/DienThoaiChinhHang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/modles/DienThoaiXachay.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/modles/DienThoaiXachay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/modles/quanLy.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/modles/quanLy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/services/ChinhHangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/services/ChinhHangService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/services/DienThoaiChinhHangService.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/services/DienThoaiChinhHangService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/services/DienThoaiXachTayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/services/DienThoaiXachTayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/services/XachTayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/services/XachTayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/services/services.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/services/services.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/utils/ReadAndWriteByteStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/utils/ReadAndWriteByteStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/utils/RepositoryByteStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/utils/RepositoryByteStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/thi/view/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/thi/view/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +86,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (2)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -94,11 +104,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.hello" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -111,6 +116,9 @@
       <option name="presentableId" value="Default" />
       <updated>1633003780842</updated>
       <workItem from="1633003787476" duration="1085000" />
+      <workItem from="1633789792549" duration="115000" />
+      <workItem from="1639997863683" duration="37000" />
+      <workItem from="1640775039522" duration="159000" />
     </task>
     <servers />
   </component>
@@ -127,6 +135,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="249" y="0" key="#Project_Structure" timestamp="1633004633997">
@@ -137,10 +146,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="489" y="336" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1633004691946" />
-    <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1633004865559">
+    <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1639997899533">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1633004865559" />
+    <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1639997899533" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1633004875265">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -157,9 +166,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1633004875265" />
-    <state x="209" y="32" key="new project wizard" timestamp="1633004873051">
+    <state x="106" y="41" key="new project wizard" timestamp="1640775198274">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="209" y="32" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1633004873051" />
+    <state x="106" y="41" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1640775198274" />
   </component>
 </project>
